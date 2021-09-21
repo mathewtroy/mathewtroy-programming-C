@@ -1,4 +1,4 @@
-//Kross Aleksandr - HW001
+//HW001
 #include <stdio.h>
 #include <stdio.h>
 
