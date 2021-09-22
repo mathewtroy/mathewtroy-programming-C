@@ -1,6 +1,5 @@
 // HW001
 #include <stdio.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 int main() {
@@ -11,11 +10,7 @@ int main() {
         
   scanf("%ld  %ld", &decNum1, &decNum2);
 
-    if ( decNum1<-10000 || decNum1>10000 ){
-            printf("Vstup je mimo interval!");
-            return 1;
-    }
-    if ( decNum2<-10000 || decNum2>10000 ){
+    if ( decNum1<-10000 || decNum1>10000 || decNum2<-10000 || decNum2>10000){
             printf("Vstup je mimo interval!");
             return 1;
     }
@@ -26,14 +21,16 @@ int main() {
         for(lenDeciFirst=abs(first); lenDeciFirst>0; lenDeciFirst=lenDeciFirst/16) {
           tmp = lenDeciFirst % 16;
           if( tmp < 10)
-          tmp = tmp + 48; else
+          tmp = tmp + 48; 
+          else
           tmp = tmp + 55;
           decFirst=decFirst*100+tmp;
         }
               for(lenDeciSec=abs(second); lenDeciSec>0; lenDeciSec=lenDeciSec/16) {
                 tmp = lenDeciSec % 16;
                 if( tmp < 10)
-                tmp = tmp + 48; else
+                tmp = tmp + 48; 
+                else
                 tmp = tmp + 55;
                 decSec=decSec*100+tmp;
               }
@@ -45,8 +42,7 @@ int main() {
             printf(" 0");    
             else if(decNum1<0)
             printf(" -");
-            else 
-            printf(" ");
+            else printf(" ");
 
         for(lenHexaFirst=decFirst;lenHexaFirst>0;lenHexaFirst=lenHexaFirst/100) {
                strFirst=lenHexaFirst % 100;
@@ -57,8 +53,7 @@ int main() {
             printf(" 0");    
             else if(decNum2<0)
             printf(" -");
-            else 
-            printf(" ");
+            else printf(" ");
 
         for(lenHexaSec=decSec;lenHexaSec>0;lenHexaSec=lenHexaSec/100) {
                strSec=lenHexaSec % 100;
