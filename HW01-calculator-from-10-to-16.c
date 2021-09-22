@@ -45,7 +45,7 @@ int main() {
             printf(" 0");    
             else if(decNum1<0)
             printf(" -");
-            else (decNum1>0);
+            else 
             printf(" ");
 
         for(lenHexaFirst=decFirst;lenHexaFirst>0;lenHexaFirst=lenHexaFirst/100) {
@@ -57,7 +57,7 @@ int main() {
             printf(" 0");    
             else if(decNum2<0)
             printf(" -");
-            else (decNum2>0);
+            else 
             printf(" ");
 
         for(lenHexaSec=decSec;lenHexaSec>0;lenHexaSec=lenHexaSec/100) {
